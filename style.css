@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
-.html {
+html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
 }
 
 .conteneur {
@@ -15,10 +22,25 @@
     padding: 0 20px;
 }
 
+/* Typographie */
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-weight: 700;
     line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 .btn {
@@ -31,18 +53,29 @@ h2 {
     cursor: pointer;
     text-decoration: none;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
+    background-color: #5a4acd;
     transform: translateY(-3px);
-    box-shadow: yellow;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn.dex {
     background-color: transparent;
-    border: 1px solide rgb(21, 165, 86);
-    color: white;
+    border: 1px solid rgb(21, 165, 86);
+    color: #5a4acd;
     margin-left: 15px;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    cursor: pointer;
 }
 
 #val {
@@ -51,14 +84,23 @@ h2 {
     left: 0;
     width: 100%;
     background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-#val.conteneur {
+#val .conteneur {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .lien {
@@ -67,17 +109,30 @@ h2 {
 }
 
 .lien li a {
-    color: #333;
+    color: var(--dark-color);
     text-decoration: none;
     padding: 10px 15px;
+    transition: var(--transition);
+}
 
+.lien li a:hover {
+    color: var(--primary-color);
 }
 
 .Dad {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 80px;
-    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.Dad .conteneur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .fav {
@@ -89,13 +144,13 @@ h2 {
 }
 
 .fav h1 span {
-    color: #6a5acd;
+    color: var(--primary-color);
 }
 
 .fav h2 {
     margin-bottom: 10px;
     font-weight: 500;
-    color: #6c757d;
+    color: var(--gray-color);
 }
 
 .fav p {
@@ -109,8 +164,9 @@ h2 {
 }
 
 .God img {
-    max-lines: 100%;
+    max-width: 100%;
     height: auto;
+
     animation: float 3s ease-in-out infinite;
 }
 
