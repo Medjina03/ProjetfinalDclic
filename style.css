@@ -322,3 +322,92 @@ h3 {
     width: inherit;
   }
 }
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.portfolio-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.portofolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.contact-contenu {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px; 
+}
+.contact-info {
+    flex: 1;
+}
+.contact-item {
+    margin-bottom: 25px;
+    display: flex;
+    align-items:flex-start ;
+}
+.contact-item i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color:yellowgreen;
+}
+.contact-form {
+    flex:1;
+    padding:30px;
+    border-radius: 10px;
+}
+.form-groupe {
+    margin-bottom: 20px;
+}
+.form-groupe input,
+.form-groupe textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+}
+.form-groupe input:focus,
+.form-groupe textarea:focus {
+    border-color: #e5ff00;
+    outline: none;
+}
+.form-groupe textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.secial-icons {
+    margin-top: 10px;
+}
+.secial-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
