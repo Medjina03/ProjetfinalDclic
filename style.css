@@ -22,7 +22,6 @@ body {
     padding: 0 20px;
 }
 
-/* Typographie */
 h1,
 h2,
 h3,
@@ -233,8 +232,6 @@ h3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-
-/* Section compétences */
 #skills {
   padding: 80px 20px;
   background-color: #f1f1f1;
@@ -248,10 +245,9 @@ h3 {
 }
 
 .section-title span {
-  color: #007bff; /* Couleur d'accent */
+  color: #007bff; 
 }
 
-/* Grille des compétences */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -322,36 +318,79 @@ h3 {
     width: inherit;
   }
 }
+
+#portfolio {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.section-title span {
+    color: #007BFF;
+}
+
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
+
 .portfolio-item {
-    background: #fff;
-    border-radius: 10px;
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
-.portofolio-item img {
+
+.portfolio-item img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
 }
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
 .portfolio-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.8);
+    color: #fff;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+    text-align: center;
 }
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.portfolio-overlay p {
+    font-size: 16px;
+}
+
 .contact-contenu {
     display: flex;
     gap: 50px;
@@ -395,19 +434,105 @@ h3 {
     min-height: 150px;
     resize: vertical;
 }
+
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 30px 0;
     text-align: center;
 }
-.secial-icons {
-    margin-top: 10px;
+
+.social-icons {
+    margin-bottom: 20px;
 }
-.secial-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+
+.social-icons a {
     display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    margin: 0 10px;
+    line-height: 40px;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+
+@media (max-width: 768px) {
+  .Dad .conteneur,
+  .Djina,
+  .contact-contenu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .God {
+    order: -1; 
+  }
+
+  .about-text,
+  .about-img {
+    max-width: 100%;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .lien {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lien li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .portfolio-overlay h3 {
+    font-size: 1rem;
+  }
+
+  .portfolio-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
 }
